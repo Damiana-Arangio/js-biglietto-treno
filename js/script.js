@@ -15,3 +15,17 @@
     > - 100km, 70 anni => prezzo corretto: €12.60
 */
 
+// DEFINIZIONE COSTANTI
+    const prezzoKm = 0.21;
+
+// DEFINIZIONE VARIABILI
+    let prezzoTotale;
+
+// INPUT: richiesta dati all'utente (km e età)
+    const kmDaPercorrere = parseFloat( prompt ("Inserisci il numero di km che vuoi percorrere") ) ;
+    const etaUtente = parseInt(prompt("Inserisci la tua età"));
+
+    // Debug richiesta dati 
+        console.log("INPUT UTENTE");
+        console.log("Km inseriti: ", kmDaPercorrere);
+        console.log("Età inserita: ", etaUtente);
