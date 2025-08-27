@@ -21,11 +21,45 @@
 // DEFINIZIONE VARIABILI
     let prezzoTotale;
 
-// INPUT: richiesta dati all'utente (km e età)
+
+// INPUT
+
+    // Richiesta km
     const kmDaPercorrere = parseFloat( prompt ("Inserisci il numero di km che vuoi percorrere") ) ;
+
+    // Richiesta età
     const etaUtente = parseInt(prompt("Inserisci la tua età"));
 
     // Debug richiesta dati 
-        console.log("INPUT UTENTE");
         console.log("Km inseriti: ", kmDaPercorrere);
         console.log("Età inserita: ", etaUtente);
+
+
+// ELABORAZIONE
+
+    // Prezzo totale biglietto
+    prezzoTotale = prezzoKm * kmDaPercorrere;
+    console.log("Prezzo iniziale: ", prezzoTotale.toFixed(2) + "€");
+
+    // Prezzo scontato
+    if (etaUtente < 18) {
+        prezzoTotale = prezzoTotale - (prezzoTotale * 0.20);
+    }
+
+    else if (etaUtente > 65) {
+        prezzoTotale = prezzoTotale - (prezzoTotale * 0.40);
+    }
+
+
+// OUTPUT
+
+    if ( !(etaUtente < 18 || etaUtente > 65) ) {
+        console.log("Nessuno sconto applicato! ");
+    }
+
+    console.log("Prezzo finale: ", prezzoTotale.toFixed(2) + "€");
+
+        
+
+
+
